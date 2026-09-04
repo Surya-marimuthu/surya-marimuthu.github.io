@@ -211,8 +211,225 @@ footer{background:#061725;color:#91aaba;padding:24px;text-align:center;font-size
 }
 </style>
 
+
+<style id="about-space-optimization">
+/* About section: slightly larger text + tighter vertical rhythm */
+#about {
+  padding-top: 54px !important;
+  padding-bottom: 54px !important;
+}
+#about > p,
+#about .section-intro,
+#about .intro,
+#about .about-intro {
+  font-size: 17px !important;
+  line-height: 1.65 !important;
+  margin-bottom: 30px !important;
+}
+#about .cards,
+#about .about-grid,
+#about .about-cards,
+#about .feature-grid {
+  gap: 20px !important;
+}
+#about .card,
+#about .about-card,
+#about .feature-card {
+  padding: 28px 26px !important;
+}
+#about .card h3,
+#about .about-card h3,
+#about .feature-card h3 {
+  font-size: 18px !important;
+  margin-bottom: 14px !important;
+}
+#about .card p,
+#about .about-card p,
+#about .feature-card p {
+  font-size: 16px !important;
+  line-height: 1.62 !important;
+}
+</style>
+
+
+<style id="profile-photo-update">
+.profile-photo, img.profile-photo {
+  width: 150px !important;
+  height: 180px !important;
+  object-fit: cover !important;
+  border-radius: 18px !important;
+  display: block !important;
+  box-shadow: 0 10px 28px rgba(0,0,0,.12) !important;
+}
+</style>
+
+<style id="two-research-clusters">
+.research-clusters{display:grid;gap:18px;}
+.research-clusters .research-framework-card{padding:25px 27px;border-radius:24px;}
+.research-clusters .research-framework-card .framework-kicker{margin-bottom:10px;font-size:10px;}
+.research-clusters .research-framework-card h3{font-size:36px;margin-bottom:9px;}
+.research-clusters .research-framework-card p{font-size:13px;line-height:1.55;margin-bottom:15px;}
+.research-clusters .research-framework-card .framework-link{padding:9px 13px;font-size:12px;}
+@media(max-width:900px){.research-clusters{grid-template-columns:1fr 1fr;}}
+@media(max-width:650px){.research-clusters{grid-template-columns:1fr;}}
+</style>
+
+<style id="tools-section-style">
+.tools-section{
+  padding:72px 0;
+}
+.tools-section .section-inner{
+  max-width:1120px;
+  margin:0 auto;
+}
+.tools-section .section-kicker{
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+.tools-section h2{
+  font-size:40px;
+  line-height:1.15;
+  margin:0 0 14px;
+}
+.tools-intro{
+  max-width:800px;
+  font-size:17px;
+  line-height:1.65;
+  margin:0 0 30px;
+}
+.tools-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+}
+.tool-card{
+  padding:25px 26px;
+  border:1px solid rgba(20,65,90,.14);
+  border-radius:20px;
+  background:rgba(255,255,255,.78);
+  box-shadow:0 10px 28px rgba(20,65,90,.07);
+}
+.tool-icon{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:48px;
+  height:30px;
+  padding:0 9px;
+  border-radius:8px;
+  background:#0b78b8;
+  color:#fff;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.08em;
+  margin-bottom:14px;
+}
+.tool-card h3{
+  font-size:20px;
+  margin:0 0 9px;
+}
+.tool-card p{
+  font-size:15px;
+  line-height:1.6;
+  margin:0 0 15px;
+}
+.tool-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+}
+.tool-tags span{
+  font-size:11px;
+  padding:6px 9px;
+  border-radius:999px;
+  background:rgba(11,120,184,.08);
+}
+@media(max-width:700px){
+  .tools-grid{grid-template-columns:1fr;}
+  .tools-section h2{font-size:32px;}
+}
+</style>
+
+
+<style id="remove-top-profile-photo">
+/* Keep the compact header/avatar; remove any standalone top hero portrait. */
+.top-profile-photo,
+.hero-profile-photo,
+.hero-profile,
+.profile-photo-wrap:not(.nav-profile-photo) {
+  display: none !important;
+}
+</style>
+
+
+<style id="larger-readable-text">
+/* Slightly larger typography throughout the portfolio for easier reading */
+body {
+  font-size: 16px !important;
+}
+p, li {
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+}
+nav a {
+  font-size: 14px !important;
+}
+section h2,
+.section-title {
+  font-size: 42px !important;
+  line-height: 1.2 !important;
+}
+section h3,
+.card h3,
+.project-card h3,
+.publication-card h3 {
+  font-size: 20px !important;
+  line-height: 1.35 !important;
+}
+.hero p,
+.hero-description,
+.about-intro {
+  font-size: 18px !important;
+  line-height: 1.7 !important;
+}
+.framework-link,
+.tool-tags span {
+  font-size: 13px !important;
+}
+@media (max-width: 700px) {
+  p, li {
+    font-size: 15.5px !important;
+  }
+  section h2,
+  .section-title {
+    font-size: 34px !important;
+  }
+  .hero p,
+  .hero-description,
+  .about-intro {
+    font-size: 17px !important;
+  }
+}
+</style>
+
 </head>
 <body>
+    
+    <style>
+      .profile-photo-wrap {
+        display:flex; justify-content:center; align-items:center;
+        margin:18px auto 8px;
+      }
+      .profile-photo {
+        width:150px; height:180px; object-fit:cover;
+        border-radius:18px; display:block;
+        box-shadow:0 10px 28px rgba(0,0,0,.12);
+      }
+    </style>
+
 
 <nav class="nav">
   <div class="nav-inner">
@@ -243,14 +460,25 @@ footer{background:#061725;color:#91aaba;padding:24px;text-align:center;font-size
         <a class="btn secondary" href="#contact">Get in touch</a>
       </div>
     </div>
-    <div class="research-framework-card">
-  <div class="framework-kicker">RESEARCH CLUSTER</div>
-  <h3>MAPSmart</h3>
-  <p>Materials for sustainability, Asset management, and Performance monitoring of Smart infrastructure (MAPSmart) Research Cluster.</p>
-  <a class="framework-link" href="https://iitt-mapsmart.weebly.com/" target="_blank" rel="noopener noreferrer">
-    Explore MAPSmart Research Cluster <span>↗</span>
-  </a>
-</div>
+    <div class="research-clusters">
+      <div class="research-framework-card cluster-card">
+        <div class="framework-kicker">RESEARCH CLUSTER</div>
+        <h3>MAPSmart</h3>
+        <p>Materials for sustainability, Asset management, and Performance monitoring of Smart infrastructure (MAPSmart) Research Cluster.</p>
+        <a class="framework-link" href="https://iitt-mapsmart.weebly.com/" target="_blank" rel="noopener noreferrer">
+          Explore MAPSmart Research Cluster <span>↗</span>
+        </a>
+      </div>
+
+      <div class="research-framework-card cluster-card">
+        <div class="framework-kicker">RESEARCH CLUSTER</div>
+        <h3>DEXTR Lab</h3>
+        <p>Research cluster and laboratory where I contribute to ongoing research activities.</p>
+        <a class="framework-link" href="https://dextrlab.wixsite.com/home/people" target="_blank" rel="noopener noreferrer">
+          Explore DEXTR Lab <span>↗</span>
+        </a>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -261,6 +489,64 @@ footer{background:#061725;color:#91aaba;padding:24px;text-align:center;font-size
     <div class="card"><h3>Research</h3><p>Transportation engineering, pavement dynamics, traffic loading, asphalt mixtures, fracture mechanics and pavement/materials engineering.</p></div>
     <div class="card"><h3>Computational work</h3><p>Finite-element analysis, pavement response analysis, material modelling and numerical simulation using engineering software.</p></div>
     <div class="card"><h3>Experimental work</h3><p>Asphalt-mixture characterization, semi-circular bending tests, accelerated pavement testing and field instrumentation.</p></div>
+  </div>
+</section>
+
+
+<section id="tools" class="tools-section">
+  <div class="section-inner">
+    <div class="section-kicker">TOOLS &amp; METHODS</div>
+    <h2>Tools I work with</h2>
+    <p class="tools-intro">
+      Computational and experimental tools used in vehicle–pavement dynamics,
+      vibrational analysis, pavement response analysis, and asphalt-mixture research.
+    </p>
+
+    <div class="tools-grid">
+      <div class="tool-card">
+        <div class="tool-icon">MAT</div>
+        <h3>MATLAB</h3>
+        <p>Vehicle–pavement dynamic analysis, vibrational analysis, numerical modelling, ODE-based system analysis, and response evaluation.</p>
+        <div class="tool-tags">
+          <span>Vehicle–Pavement Dynamics</span>
+          <span>Vibrational Analysis</span>
+          <span>Numerical Modelling</span>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-icon">FE</div>
+        <h3>Finite Element Analysis</h3>
+        <p>Mechanistic pavement response analysis, stress–strain evaluation, material modelling, and simulation of pavement behaviour.</p>
+        <div class="tool-tags">
+          <span>Pavement Response</span>
+          <span>Stress–Strain Analysis</span>
+          <span>Material Modelling</span>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-icon">EXP</div>
+        <h3>Experimental Testing</h3>
+        <p>Asphalt-mixture characterization, semi-circular bending tests, dynamic testing, and field pavement investigation.</p>
+        <div class="tool-tags">
+          <span>Asphalt Mixtures</span>
+          <span>SCB Testing</span>
+          <span>Field Testing</span>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-icon">APT</div>
+        <h3>Accelerated Pavement Testing</h3>
+        <p>Investigation of pavement responses under repeated traffic loading and vehicle–pavement interaction conditions.</p>
+        <div class="tool-tags">
+          <span>Traffic Loading</span>
+          <span>Pavement Performance</span>
+          <span>Field Instrumentation</span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -415,7 +701,7 @@ footer{background:#061725;color:#91aaba;padding:24px;text-align:center;font-size
   <div class="grid">
     <div class="card"><h3>Awards & Recognition</h3><p>Received awards and recognition in civil engineering symposiums and paper/poster presentations.</p></div>
     <div class="card"><h3>RILEM Young Member</h3><p>Young Member of RILEM, International Union of Laboratories and Experts in Construction, Materials, Systems and Structures.</p></div>
-    <div class="card"><h3>Accelerated Testing</h3><p>Contributor to the NATPaVeD annual progress reports submitted to the Ministry of Road Transport & Highways, Government of India.</p></div>
+    <div class="card"><h3>Accelerated Testing</h3><p>Involved in the design and analysis of NATPaVeD APT Facility.</p></div>
   </div>
 </section>
 
